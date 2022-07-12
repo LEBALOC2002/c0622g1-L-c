@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Freetuts.net</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+        // Khai báo biến
+        let inputPhysics;
+        let inputChemistry;
+        let inputBiological;
+        // Sử dụng hàm prompt để lấy dữ liệu người dùng
+        inputPhysics = prompt("Enter the physics");
+        inputChemistry = prompt("Enter the chemistry");
+        inputBiological = prompt("Enter the biological");
+        // Sử dụng hàm parselnt() để chuyển dữ liệu sang số nguyên
+        let physics = parseInt(inputPhysics);
+        let chemistry = parseInt(inputChemistry);
+        let biological = parseInt(inputBiological);
+        // Tính điểm trung bình và tổng
+        let medium = (physics + chemistry + biological) / 3;
+        let total = physics + chemistry + biological;
+        // In ra kết quả
+        document.write("The medium is: " + medium);
+        document.write('<br/>');
+        document.write("The total is: " + total);
+    </script>
+    </body>
+</html>
