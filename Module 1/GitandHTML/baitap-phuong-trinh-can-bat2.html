@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIẢI PHƯƠNG TRÌNH BẬC 2</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <b>TÍNH PHƯƠNG TRÌNH BẬT HAI </b>
+            </td>
+        </tr>
+        <tr>
+            <td> NHẬP A</td>
+            <td>
+                <input type="number" id="number1">
+            </td>
+        <tr>
+            <td>
+                NHẬP B
+            </td>
+            <td>
+                <input type="number" id="number2">
+            </td>
+        <tr>
+            <td>
+                NHẬP C
+            </td>
+            <td>
+                <input type="number" id="number3">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                KẾT QUẢ
+            </td>
+            <td>
+                <input type="number" readonly id="result">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button onclick=add()>TỔNG </button>
+                <button onclick=can()>CANCER</button>
+            </td>
+        </tr>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    function add() {
+        var number1 = document.getElementById("number1").value;
+        var number2 = document.getElementById("number2").value;
+        var number3 = document.getElementById("number3").value;
+        var delta = ((number2 * number2) - (4 * number1 * number3));
+
+        if (delta == 0) {
+            alert("phuong trinh co nghiem kep x1 = x2 = " + (-b / 2 / a) + " ");
+        }
+        else if (delta > 0)
+            alert("phuong trinh co nghiem x1 = " + ((-b - Math.sqrt(delta)) / 2 / a) + ", x2 = " + ((-b + Math.sqrt(delta)) / 2 / a) + " ");
+        else if (delta < 0) {
+            alert("phuong trinh vo nghiem");
+        }
+        document.getElementById("result").value = delta;
+    }
+function can(){
+    number1.value=null ;
+    number2.value=null;
+    number3.value=null;
+    result.value=null;
+
+}
+</script>
+</head>
+
+</html>
