@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ứng dụng máy tính</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2">
+            <input type="number" id="number1" placeholder="nhâp số thứ nhất">
+        </td>
+        <td colspan="2">
+            <input type="number" id="number2" placeholder="nhâp số thứ hai">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick=add()>Cộng</button>
+        </td>
+        <td>
+            <button onclick=sud()>Trừ</button>
+        </td>
+        <td>
+            <button onclick=mul()>Nhân</button>
+        </td>
+        <td>
+            <button onclick=div()>Chia</button>
+        </td>
+    </tr>
+    <tr> 
+    </table>
+        <h2>Result</h2>
+        <p id="result"></p>
+    </tr>
+    </table>
+</body>
+<script>
+    function add() {
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+        let total = number1 + number2;
+        document.getElementById("result").innerHTML =  total;
+        
+    }
+    function sud() {
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+        let total = number1 - number2;
+        document.getElementById("result").innerHTML = total;
+        
+    }
+    function mul() {
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+        let total = number1 * number2;
+        document.getElementById("result").innerHTML = total;
+        
+    }
+    function div() {
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+        let total = number1 / number2;
+        document.getElementById("result").innerHTML = total;
+    
+    }
+</script>
+</html>
