@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập thêm</title>
+</head>
+
+<body>
+    <!-- // thiết kế chương trình để thực hiện nhiệm vụ sau:
+// 1. Ô để nhập vào kích cỡ
+// 2. Ô để nhập giá trị min
+// 3. Ô để nhập giá trị max
+// 4. Ô để hiển thị mảng
+// 5. Ô để hiển thị tổng các giá trị có trong mảng
+// 6. Ô để hiển thị giá trị lớn nhất trong mảng
+// 7. Ô để hiển thị số lượng các số chẵn có trong mảng
+// 8. Có 1 button, khi click vào button này thì sẽ xử lý và trả kết quả vào trong các ô từ 4 đến 7
+// Khi ấn vào nút button thì sẽ tạo ra 1 mảng có kích cỡ là size và các giá trị được sinh ngẫu nhiên trong [min, max]
+// sau đó xử lý để hiển thị vào các ô từ 4 đến 7 -->
+    <table border="1">
+
+        <tr>
+            <td>nhập kích cở mảng</td>
+            <td> <input type="number" id="size"></td>
+        </tr>
+        <tr>
+            <td>nhập giá trị min</td>
+            <td> <input type="text" id="min"></td>
+        </tr>
+        <tr>
+            <td>nhập giá trị max</td>
+            <td><input type="text" id="Max"></td>
+        </tr>
+        <tr>
+            <td>hiển thị mảng</td>
+            <td><input type="text" id="array"></td>
+        </tr>
+        <tr>
+            <td>tổng giá trị trong mảng</td>
+            <td><input type="text" id="showarray"></td>
+        </tr>
+        <tr>
+            <td>tổng giá trị lớn nhất</td>
+            <td><input type="text" id="numbermax"></td>
+        </tr>
+        <tr>
+            <td>hiển thị số chẵn trong mảng</td>
+            <td><input type="text" id="numberchan"></td>
+        </tr>
+    </table>
+    <button type="button" onclick="resutl()">KẾT QUẢ</button>
+</body>
+
+</html>
+<script>
+    function resutl() {
+        let kichCo = Number(document.getElementById("size").value);
+        let min = Number(document.getElementById("min").value);
+        let max = Number(document.getElementById("Max").value);
+        let mang = (document.getElementById("array"));
+        let tong = (document.getElementById("showarray"));
+        let giatrilonnhat = (document.getElementById("numbermax"));
+        let sochan = (document.getElementById("numberchan"));
+        let numbers = new Array(kichCo);
+        for (let a = 0; a < numbers.length; a++) {
+            numbers[a] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        mang.value = numbers;
+        let total = 0
+        let b = 0
+        // // for (let b = 0; b < numbers.length; b++) {
+        // //     total = total + numbers[b];
+        // // }
+        // do{
+        //     total= total+numbers[b];
+        //     b++;
+        // }
+        // while(b<numbers.length)
+        while( b< numbers.length){
+            total = total + numbers[b];
+            b ++ ;
+        }
+
+
+        tong.value = total
+        let solonnhat = numbers[0];
+        for (c = 0; c < numbers.length; c++) {
+            if (solonnhat < numbers[c]) {
+                solonnhat = numbers[c];
+            }
+        }
+        giatrilonnhat.value = solonnhat;
+
+        let count = 0;
+        for (d = 0; d < numbers.length; d++) {
+            if (numbers[d] % 2 == 0) {
+                count = count + 1;
+            }
+        }
+        sochan.value = count;
+    }
+
+
+
+</script>
