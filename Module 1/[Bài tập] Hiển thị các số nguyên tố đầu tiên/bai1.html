@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khai báo biến số nguyên numbers và nhập cho nó một giá trị từ bàn phím để lưu số lượng số nguyên tố cần in
+        ra.</title>
+</head>
+
+<body>
+    <script>
+
+let number = Number(prompt("Nhập ... số nguyên tố đầu tiên"));
+let uoc = 0;
+let count = 0;
+function check(number) {
+    for (let N = 2; N < 1000; N++) {
+        if (count < number) {
+            for (let i = 1; i <= N; i++) {
+                if (N % i == 0) {
+                    uoc += 1;
+                }
+            }
+            if (uoc == 2) {
+                document.write(`${N}<br>`);
+                count += 1;
+            }
+            uoc = 0;
+        }
+        else {
+            break;
+        }
+    }
+}
+check(number); 
+    </script>
+</body>
+
+</html>
